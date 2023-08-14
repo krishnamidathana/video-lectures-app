@@ -1,0 +1,93 @@
+import {
+  Input,
+  Button,
+  HStack,
+  Heading,
+  VStack,
+  Box,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
+import React from 'react';
+import { AiOutlineSend } from 'react-icons/ai';
+
+const Footer = () => {
+  return (
+    <Box bgColor={'blackAlpha.900'} minH={'40'} p="16" color={'white'}>
+      <Stack direction={['column', 'row']}>
+        <VStack alignItems={'stretch'} w={'full'} px={'4'}>
+          <Heading
+            size="md"
+            textAlign={['center', 'left']}
+            textTransform={'uppercase'}
+          >
+            Subscribe To Get Updates
+          </Heading>
+          <HStack borderBottom={'2px solid white'} py="2">
+            <Input
+              placeholder="Enter Email Here...."
+              border={'none'}
+              borderRadius={'none'}
+              outline={'none'}
+              focusBorderColor="none"
+            />
+            <Button
+              p={'0'}
+              colorScheme={'purple'}
+              variant={'ghost'}
+              borderRadius={'0 20px 20px 0'}
+            >
+              <AiOutlineSend size={'20'} />
+            </Button>
+          </HStack>
+        </VStack>
+
+        <VStack
+          w={'full'}
+          borderLeft={['none', '1px solid white']}
+          borderRight={['none', '1px solid white']}
+        >
+          <Heading
+            size={'md'}
+            textTransform={'uppercase'}
+            marginTop={['5', '0']}
+            textAlign={'center'}
+          >
+            Video Hub
+            <Text
+              fontSize={'17px'}
+              marginTop={'18px'}
+              fontWeight={'normal'}
+              color={'grey'}
+            >
+              All Rights Reserved
+            </Text>
+          </Heading>
+        </VStack>
+
+        <VStack w={'full'}>
+          <Heading
+            size={'md'}
+            marginTop={['5', '0']}
+            textTransform={'uppercase'}
+          >
+            Follow Us
+          </Heading>
+          <Button variant={'link'} paddingTop={'6px'} colorScheme={'whatsapp'}>
+            <a target="blank" href="https://github.com/krishnamidathana">
+              Git Hub
+            </a>
+          </Button>
+
+          <Button variant={'link'} paddingTop={'6px'} colorScheme={'pink'}>
+            <a target="blank" href="https://Instagram.com/krishnamohan9661">
+              Instagram
+            </a>
+          </Button>
+        </VStack>
+      </Stack>
+    </Box>
+  );
+};
+
+export default Footer;
